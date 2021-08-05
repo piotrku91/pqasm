@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <memory>
 #include "DataBlock.hpp"
+#include <string>
 
 
 class filePQAsmManager
@@ -16,7 +17,7 @@ class filePQAsmManager
     
 
 public:
-    AnalyzeErrors Analyze(std::vector<std::string> &content);
+    AnalyzeErrors Analyze();
     bool readFileToVector(std::string filename);
     bool saveToBin(const std::string &filename);
 

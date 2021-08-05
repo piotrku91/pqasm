@@ -5,9 +5,18 @@ enum class opCodes : uint_fast8_t
 
 enum class operandsCodes : uint_fast8_t
 {
-    BtoA = 0b000,
-    AtoB = 0b001,
-    MemToA = 0b010,
-    AToMem = 0b011,
-    DataToA = 0b100
+    RegisterAfromPointerContent = 0b000,
+    RegisterBfromPointerContent = 0b001,
+    RegisterAfromOperand = 0b100,
+    RegisterBfromOperand = 0b101,
+    StoreInRAMfromRegisterA = 0b110,
+    StoreInRAMfromRegisterB = 0b111
+};
+
+enum class AnalyzeErrors
+{
+    OK,
+    UnknownCommand,
+    SyntaxError,
+    VariableOverflow
 };
